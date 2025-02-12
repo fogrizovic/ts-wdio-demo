@@ -25,3 +25,6 @@ MAC/LINUX
 ```console
 foo@bar:~$ npm run all  
 ```
+```console
+foo@bar:~$ npm run all -- --logLevel debug
+```
