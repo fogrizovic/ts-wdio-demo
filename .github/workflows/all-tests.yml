@@ -22,12 +22,11 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18.20.2'  # Specify your Node.js version here
+        node-version: '18.20.2'  
 
     - name: Install dependencies
       run: npm install
         
-
     - name: Run tests
       env:
         CI: true 
@@ -37,17 +36,17 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: allure-results
-        path: ./allure-results  # Upload the results directory
+        path: ./allure-results  
 
     - name: Install Allure command-line tool
       run: npm install -g allure-commandline --save-dev
 
     - name: Generate Allure report
       run: allure generate ./allure-results --clean
-
+    
     - name: Publish Allure report to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
-        folder: ./allure-report  # Path to the generated Allure report folder
+        folder: ./allure-report  
         token: ${{ secrets.GITHUB_TOKEN }}
