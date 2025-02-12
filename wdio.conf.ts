@@ -125,7 +125,14 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        ['allure', {
+            outputDir: 'allure-results',  // Directory where Allure results will be stored
+            disableWebdriverScreenshots: false, // Optional: set to true if you don't need screenshots in reports
+            disableWebdriverStepsReporting: false, // Optional: set to true if you don't want to log webdriver steps
+        }]
+    ],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/

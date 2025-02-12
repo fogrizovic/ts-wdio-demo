@@ -19,6 +19,7 @@ foo@bar:~$ npm i
 ## Scripts
 - all: for running all tests
 - smoke: for running smoke tests
+- reports: generates reports in allure-report folder
 ### Examples
 
 MAC/LINUX
