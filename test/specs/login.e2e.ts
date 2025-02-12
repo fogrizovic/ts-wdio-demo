@@ -13,7 +13,7 @@ describe('Login tests', () => {
         await browser.reloadSession();
     });
 
-    it('should go to Dashboard page when login with valid credentials', async () => {
+    it('@smoke should go to Dashboard page when login with valid credentials', async () => {
 
         const credentials = {
             username: 'Admin',

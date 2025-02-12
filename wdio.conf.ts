@@ -130,7 +130,8 @@ export const config: WebdriverIO.Config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        timeout: 5 * 60 * 1000
+        timeout: 5 * 60 * 1000,
+        grep: process.env.TAG || '',
     },
 
     //
