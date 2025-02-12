@@ -1,10 +1,12 @@
 import { expect } from '@wdio/globals'
 import loginPage from "../pageobjects/login.page";
+import allureReporter from '@wdio/allure-reporter';
 
 describe('Login tests', () => {
 
     beforeEach(async () => {
         await loginPage.open();
+        allureReporter.addStep('opened LoginPage');
     });
 
     afterEach(async () => {
@@ -20,6 +22,7 @@ describe('Login tests', () => {
         it('should display error message when login with invalid credentials', async () => {
 
             await loginPage.doLogin(credentials.username, credentials.password);
+            allureReporter.addStep('Entered credentials');
 
             await expect(loginPage.errorMessage).toHaveText('Invalid credentials')
 
