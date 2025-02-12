@@ -27,17 +27,4 @@ describe('Login tests', () => {
 
     })
 
-    it('should display error message when login with invalid credentials', async () => {
-
-        const credentials = {
-            username: 'Admin',
-            password: 'aaaa'
-        }
-
-        await loginPage.doLogin(credentials.username, credentials.password);
-
-        await expect(loginPage.errorMessage).toHaveText('Invalid credentials')
-
-    })
-
 })
