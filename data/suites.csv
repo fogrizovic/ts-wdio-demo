@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","2552","@smoke should go to Dashboard page when login with valid credentials","","Wed Feb 12 04:43:32 UTC 2025","passed","Wed Feb 12 04:43:35 UTC 2025","","Login tests","",""
-"","1878","should display error message when login with invalid credentials","","Wed Feb 12 04:43:35 UTC 2025","passed","Wed Feb 12 04:43:37 UTC 2025","","Login tests","",""
+"","2554","@smoke should go to Dashboard page when login with valid credentials","","Thu Feb 13 20:31:13 UTC 2025","passed","Thu Feb 13 20:31:16 UTC 2025","","Login tests","",""
+"","1931","should display error message when login with invalid credentials","","Thu Feb 13 20:31:16 UTC 2025","passed","Thu Feb 13 20:31:17 UTC 2025","","Login tests","",""
